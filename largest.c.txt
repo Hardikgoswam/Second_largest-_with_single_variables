@@ -1,20 +1,19 @@
+
 #include <stdio.h>
 
 int main()
-{   int n,x,y=0,z=0,largest,second;
+{   int n,x,f=0,s=0;
     printf("Enter Number of NO: ");
     scanf("%d",&n);
     for(int  i = 0 ; i < n ; i++) {
         scanf("%d",&x);
-        if( y < x ){
-            largest = x;
+        if( f < x ){
+            s = f;
+            f = x;
         }
-        if( largest > z )
-           second = z;
-        y = second;
-        z = largest;
-    }
-        printf("%d",second);
-
+        if( x > s && x < f )
+           s = x;
+    }        
+    printf("%d",s);
     return 0;
 }
